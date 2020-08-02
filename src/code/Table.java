@@ -56,7 +56,8 @@ public class Table {
 	}
 	public static void main(String[] args) {
 		Table bob = new Table();
-		System.out.println(bob);
-		System.out.println(bob.getValue(3));
+		bob.setValuesSymmetric(1, 2, 3, 4);
+		System.out.println("Bob:\n" + bob);
+		System.out.println("A0 and B1 for B: " + bob.getValue(3));
 	}
 }

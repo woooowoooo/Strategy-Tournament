@@ -75,6 +75,8 @@ public class Strategy {
 		Strategy strat = new Strategy("Greedy");
 		Table bob = new Table();
 		bob.setValuesSymmetric(2, 5, 6, 9);
+		System.out.println("Using Table bob:\n" + bob + "\n");
+		System.out.println("And strategy " + strat + ":");
 		System.out.println("Strat decides " + strat.run(bob.getValues(true)));
 	}
 }
