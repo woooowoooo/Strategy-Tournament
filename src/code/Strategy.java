@@ -5,10 +5,10 @@ public class Strategy {
 		name = type;
 	}
 	public String getName() {
-		return this.name;
+		return name;
 	}
 	public void setName(String newName) {
-		this.name = newName;
+		name = newName;
 	}
 	private int greederous(int[][][] data, boolean greedy) {
 		int diff = (data[0][0][0] + data[0][1][0]) - (data[1][0][0] + data[1][1][0]);
@@ -46,7 +46,7 @@ public class Strategy {
 		}
 	}
 	public int run(int[][][] data) {
-		switch (this.name) {
+		switch (name) {
 			case "AlwaysA":
 				return 0;
 			case "AlwaysB":

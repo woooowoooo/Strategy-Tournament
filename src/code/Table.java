@@ -52,7 +52,7 @@ public class Table {
 		return trans;
 	}
 	public String toString() {
-		return Arrays.deepToString(this.values[0]) + "\n" + Arrays.deepToString(this.values[1]);
+		return Arrays.deepToString(values[0]) + "\n" + Arrays.deepToString(values[1]);
 	}
 	public static void main(String[] args) {
 		Table bob = new Table();

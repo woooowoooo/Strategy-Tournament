@@ -6,12 +6,12 @@ public class Tournament {
 		String[] names = {"AlwaysA", "AlwaysB", "Greedy", "Generous", "Random", "Minimize", "Copycat", "Beatlast"};
 		strats = new Strategy[8];
 		for (int i = 0; i < 8; i++) {
-			this.strats[i] = new Strategy(names[i]);
+			strats[i] = new Strategy(names[i]);
 		}
 	}
 	public Tournament(String[] names) {
 		for (int i = 0; i < 8; i++) {
-			this.strats[i] = new Strategy(names[i]);
+			strats[i] = new Strategy(names[i]);
 		}
 	}
 	public void runTournament(int repeats) {
