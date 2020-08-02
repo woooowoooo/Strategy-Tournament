@@ -27,8 +27,8 @@ public class Tournament {
 	public int[] runMatch(Strategy a, Strategy b, int repeats) {
 		int[] results = {0, 0};
 		for (int i = 0; i < repeats; i++) {
-			int choiceA = a.run(data.getValues());
-			int choiceB = b.run(data.getTranspose());
+			int choiceA = a.run(data.getValues(false));
+			int choiceB = b.run(data.getValues(true));
 			results[0] += data.getValue(choiceA, choiceB, 0);
 			results[1] += data.getValue(choiceA, choiceB, 1);
 		}
