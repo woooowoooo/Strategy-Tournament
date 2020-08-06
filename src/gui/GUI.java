@@ -6,7 +6,8 @@ public class GUI extends JFrame {
 	//Add components
 	JFrame frame = new JFrame();
 	JPanel top = new JPanel();
-	JPanel center = new JPanel();
+	JPanel buttons = new JPanel();
+	JPanel credits = new JPanel();
 	public void setup() {
 		//Setup frame
 		frame.setTitle("Strategy Tournament v0.1");
@@ -17,10 +18,6 @@ public class GUI extends JFrame {
 		//Initialize components
 		JLabel textLabel = new JLabel("Click me!");
 		JButton next = new JButton("Got it!");
-		JPanel buttons = new JPanel();
-		JPanel credits = new JPanel();
-		JLabel credit1 = new JLabel("Inspired by Universal Paperclips;");
-		JLabel credit2 = new JLabel("made during the quarantine on 4/8/20.");
 		//Add buttton action
 		ActionListener nextClicked = new ActionListener() {
 			public void actionPerformed(ActionEvent clicked) {
@@ -33,10 +30,10 @@ public class GUI extends JFrame {
 		top.add(next);
 		frame.add(top, BorderLayout.PAGE_START);
 		frame.add(buttons, BorderLayout.LINE_START);
-		frame.add(center, BorderLayout.CENTER);
-		credits.add(credit1);
-		credits.add(credit2);
-		frame.add(credits, BorderLayout.PAGE_END);
+		credits.add(new JLabel("Inspired by Universal Paperclips."));
+		credits.add(new JLabel("Made during the quarantine on 4/8/20."));
+		credits.add(new JLabel("Updated on 8/4/20."));
+		frame.add(credits, BorderLayout.CENTER);
 		frame.setVisible(true);
 	}
 	public void update() {
